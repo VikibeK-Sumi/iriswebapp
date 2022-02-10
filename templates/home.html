@@ -1,0 +1,94 @@
+<html>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .header
+        {
+            background-color: #006256;
+            text-align: center;
+            color: white;
+            padding: 4em 0;
+        }
+        .form_container
+        {
+            display: flex;
+            justify-content: space-around;
+                     /* background-color: #007265  ; */
+            margin: 0.1em  0
+        }
+        .input_form
+        {
+            width: 25em;
+        }
+        input
+        {
+            width: 100%;
+            margin: 0.5em 0;
+            padding: 0.5em 0;
+            border-radius: 0.4em 0.01px;
+        }
+        .result_container
+        {
+            display: flex;
+            justify-content: space-around
+        }
+        .result
+        {
+            width: 25em;
+            margin: 0.1em 0;
+            padding: 1em 0;
+            text-align: center;
+            background-color: #008373    ;
+            color: white;
+        }
+    </style>
+    
+
+
+
+
+
+<body>
+
+    <div class = 'header'>
+        <h1>Iris Model</h1>
+    </div>
+    
+
+    <div class="form_container">
+        <div class = 'input_form'>
+            <form method = GET action = ''>
+                <input type = 'text' name = 'slength' placeholder = 'Enter SepalLength'><br>
+                <input type = 'text' name = 'swidth' placeholder = 'Enter SepalWidth'><br>
+                <input type = 'text' name = 'plength' placeholder = 'Enter PetalLength'><br>
+                <input type = 'text' name = 'pwidth' placeholder = 'Enter PetalWidth'><br>
+                <input class = 'submit' type = 'submit'> 
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class = 'result_container'>
+        <div class = 'result'>
+            {% if ok %}
+                <div class = 'features'>
+                    <span>Sepal Length = {{sl}}</span><br>
+                    <span>Sepal Width = {{sw}}</span><br>
+                    <span>Petal Length = {{pl}}</span><br>
+                    <span>Petal Width = {{pw}}</span>
+                </div>
+            {% endif %}
+                <p class="result">{{text}}{{res}}</b></p>
+        </div>
+        
+    </div>
+
+
+
+</body>
+</html>

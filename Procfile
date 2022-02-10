@@ -1,0 +1,1 @@
+web gunicorn IRIS.wsgi:application --log-file -
