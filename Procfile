@@ -1,1 +1,1 @@
-web gunicorn IRIS.wsgi:application --log-file -
+web: gunicorn IRIS.wsgi:application --log-file -
